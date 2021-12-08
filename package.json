@@ -19,6 +19,7 @@
     "snowpack-plugin-stylus": "^1.0.6"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.0.2"
