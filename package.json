@@ -21,6 +21,7 @@
   "dependencies": {
     "@ppzp/utils": "file:../utils.js/ppzp-utils-0.0.0.tgz",
     "animate.css": "^4.1.1",
+    "canvas-confetti": "^1.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.0.2"

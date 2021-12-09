@@ -4,6 +4,9 @@ import Core from './core'
 export default function() {
   const list = ['I', 'have', 'a', 'dream']
   return <div>
-    <Core target = {list} next = {() => console.log('over')} />
+    <Core
+      target = {list}
+      onFinish = {() => console.log('over')}
+      />
   </div>
 }

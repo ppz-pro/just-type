@@ -3,14 +3,14 @@ import React from 'react'
 import './index.styl'
 import isLegalLetter from './legal-letter'
 import sleep from '@ppzp/utils/sleep'
-import audio from './audio'
+import hooks from '../hooks'
 
 export default class extends Component {
   constructor(props) {
     super(props)
     const self = this
 
-    { // state
+    { // 基础 state
       var state = initState()
       self.onUpdate(prevProps => {
         if(prevProps.target != self.props.target)
@@ -32,17 +32,19 @@ export default class extends Component {
         if(key != letters[current]) {
           if(isLegalLetter(key)) {
             console.debug(`输入错误，${key}，应该是 ${letters[current]}`)
-            catchIllegal()
+            shake()
+            hooks.onWrongType()
           }
           return
         }
         console.debug('yeah', key)
+        hooks.onRightType()
         self.setState({
           current: current + 1
         })
         if(current > letters.length - 2) {
           console.debug('单词完毕')
-          audio.success()
+          hooks.onFinishOne()
           props.next()
         }
       }
@@ -55,20 +57,16 @@ export default class extends Component {
     }
 
     { // 错误输入的“摇晃动画”
-      state.illegalClassName = ''
-      let illegalTimeid
-      var catchIllegal = () => {
-        clearTimeout(illegalTimeid)
-  
-        enableShake()
-        illegalTimeid = setTimeout(() => shake(false), 1000)
-      }
-      async function enableShake() {
-        shake(false)
+      state.shakeStyle = ''
+      let timeid
+      var shake = async function() {
+        clearTimeout(timeid)
+        _shake(false)
         await sleep(1)
-        shake(true)
+        _shake(true)
+        timeid = setTimeout(() => _shake(false), 1000)
       }
-      function shake(enable) {
+      function _shake(enable) {
         self.setState({
           illegalClassName: enable ? 'animate__animated animate__headShake' : ''
         })

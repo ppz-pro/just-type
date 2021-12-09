@@ -1,6 +1,7 @@
 import { Component } from '../../../lib/react'
 import React from 'react'
 import One from './one'
+import hooks from './hooks'
 
 export default class extends Component {
   constructor(props) {
@@ -21,8 +22,10 @@ export default class extends Component {
       this.setState({
         current: this.state.current + 1
       })
-      if(current > words.length - 2 && props.next)
-        props.next()
+      if(current > words.length - 2 && props.onFinish) {
+        hooks.onFinish()
+        props.onFinish()
+      }
     }
   }
   render() {
