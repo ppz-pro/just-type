@@ -1,36 +1,35 @@
 import danger from '@ppzp/utils/danger'
+import confetti from 'canvas-confetti'
 
 const audio = (function() {
   const el = document.createElement('audio')
-  function p(name) {
+  return function(name) {
     el.src = `/audio/${name}.mp3`
     el.play()
-  }
-  
-  return {
-    success() {
-      p('di')
-    },
-    error() {
-      p('error')
-    }
   }
 })()
 
 function onWrongType() {
-  audio.error()
+  audio('error')
 }
 
 function onRightType() {
-  audio.success()
 }
 
 function onFinishOne() {
-
+  audio('di')
 }
 
 function onFinish() {
-
+  audio('applause')
+  confetti({
+    angle: 60,
+    origin: { x: 0 }
+  })
+  confetti({
+    angle: 120,
+    origin: { x: 1 }
+  })
 }
 
 export default {
