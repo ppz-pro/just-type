@@ -1,8 +1,9 @@
-import { Component } from '../../../lib/react'
+import { Component } from '../../../../lib/react'
 import React from 'react'
-import './one.styl'
+import './index.styl'
 import isLegalLetter from './legal-letter'
 import sleep from '@ppzp/utils/sleep'
+import audio from './audio'
 
 export default class extends Component {
   constructor(props) {
@@ -41,6 +42,7 @@ export default class extends Component {
         })
         if(current > letters.length - 2) {
           console.debug('单词完毕')
+          audio.success()
           props.next()
         }
       }
