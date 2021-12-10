@@ -1,16 +1,31 @@
 @import '../../../../style/reuse'
 
-height = 3rem
-
 .just-type-head
   display: flex
-  align-items: flex-start
+  align-items: center
+  justify-content: flex-end
+  background: headBgColor
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  height: 2rem
+  color: headColor
+  shadow()
   .app-title
-    font-size: 1.3rem
-    line-height: 1
-    padding: .6rem
+    position: absolute
+    top: 0
+    left: 0
+    font-size: 1.6rem
+    font-weight: 666
+    padding: 1.2rem
+    padding-right: 1.25rem
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
+    background: green
+    shadow()
   .just-type-tool-bar
     flex: 1
-    height: 1rem
+    line-height: size2
     font-size: .8rem
     text-align: right
