@@ -1,4 +1,4 @@
-import { Component } from '../../../../lib/react'
+import { Component } from '@ppzp/react'
 import React from 'react'
 import './index.styl'
 import isLegalLetter from './legal-letter'

@@ -5,14 +5,14 @@ import {
   Route
 } from 'react-router-dom'
 
-import TypeWord from '../../page/type-word'
-import Test from '../../page/test'
+import JustType from '../page/just-type/entry'
+import Test from '../page/test'
 
 export default function() {
   return <HashRouter>
     <Routes>
       <Route path="/test" element={<Test />} />
-      <Route path="/" element={<TypeWord />} />
+      <Route path="/*" element={<JustType />} />
     </Routes>
   </HashRouter>
 }
