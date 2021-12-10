@@ -30,7 +30,7 @@ export default class extends Component {
   }
   render() {
     const { current, words } = this.state
-    return <div>
+    return <div className = 'core'>
       {words[current]
         ? <One
             target = {words[current]}
