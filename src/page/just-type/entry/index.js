@@ -3,12 +3,12 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
-import Head from './head'
+import Options from './options'
 import Yeah from '../page/yeah'
 
 export default function() {
   return <div>
-    <Head />
+    <Options />
     <Routes>
       <Route path="/" element={<Yeah />} />
     </Routes>
