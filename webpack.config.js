@@ -8,6 +8,7 @@ module.exports = {
     path: Path.resolve(__dirname, 'dist')
   },
   mode: 'development',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {

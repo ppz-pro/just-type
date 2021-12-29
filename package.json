@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@ppzp/react": "file:../react/ppzp-react-0.0.1.tgz",
+    "@ppzp/style": "file:../style/ppzp-style-0.0.0.tgz",
     "@ppzp/utils": "0.0.1",
     "animate.css": "^4.1.1",
     "canvas-confetti": "^1.4.0",

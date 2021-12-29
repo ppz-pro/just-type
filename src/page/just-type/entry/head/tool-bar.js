@@ -1,5 +1,7 @@
 import React from 'react'
 
 export default function() {
-  return <div className = 'just-type-tool-bar'>toolbar</div>
+  return <div className = 'tool-bar'>
+    <a className = 'top-btn' href = 'https://github.com/ppz-pro/just-type' title = '源码在这里'>github</a>
+  </div>
 }

@@ -5,13 +5,20 @@
   align-items: center
   justify-content: flex-end
   fixed(top: 0, left: 0, right: 0)
-  height: 2rem
+  height: 3rem
   shadow()
+  padding: 0 2rem
   .app-title
-    absolute(left: 0)
-    font-weight: 600
-  .just-type-tool-bar
+    font-size: 1.2rem
+    font-weight: bolder
+    color: primary()
+  .tool-bar
     flex: 1
-    line-height: 2
     font-size: .9rem
     text-align: right
+    a.top-btn
+      text-decoration: none
+      color: text(a: .6)
+      &:hover
+        text-decoration: underline
+        color: text()
