@@ -1,7 +1,7 @@
-export default function(name) {
+export default function(url) {
   const el = document.createElement('audio')
   return function() {
-    el.src = `./audio/${name}.mp3`
+    el.src = url
     el.play()
   }
 }

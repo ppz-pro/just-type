@@ -2,13 +2,16 @@ import danger from '@ppzp/utils/danger'
 import confetti from 'canvas-confetti'
 import audio from '../../../../../common/audio'
 
-const onWrongType = audio('error')
+import errorMP3 from './audio/error.mp3'
+const onWrongType = audio(errorMP3)
 
 const onRightType = () => {}
 
-const onFinishOne = audio('di')
+import diMP3 from './audio/di.mp3'
+const onFinishOne = audio(diMP3)
 
-const applause = audio('applause')
+import applauseMP3 from './audio/applause.mp3'
+const applause = audio(applauseMP3)
 const onFinish = function() {
   applause()
   confetti({
