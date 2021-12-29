@@ -15,12 +15,21 @@
   },
   "homepage": "https://github.com/ppz-pro/type-word#readme",
   "devDependencies": {
-    "snowpack": "^3.8.8",
-    "snowpack-plugin-stylus": "^1.0.6"
+    "@babel/core": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "@ppzp/stylus": "file:../stylus/ppzp-stylus-0.0.1.tgz",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "style-loader": "^3.3.1",
+    "stylus": "^0.56.0",
+    "stylus-loader": "^6.2.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
   },
   "dependencies": {
-    "@ppzp/react": "file:lib/ppzp-react-1.0.0.tgz",
-    "@ppzp/utils": "file:../utils.js/ppzp-utils-0.0.0.tgz",
+    "@ppzp/react": "file:../react/ppzp-react-0.0.1.tgz",
+    "@ppzp/utils": "0.0.1",
     "animate.css": "^4.1.1",
     "canvas-confetti": "^1.4.0",
     "react": "^17.0.2",

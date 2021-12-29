@@ -1,31 +1,17 @@
-@import '../../../../style/reuse'
+@import '@ppzp/stylus'
 
 .just-type-head
   display: flex
   align-items: center
   justify-content: flex-end
-  background: headBgColor
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
+  fixed(top: 0, left: 0, right: 0)
   height: 2rem
-  color: headColor
   shadow()
   .app-title
-    position: absolute
-    top: 0
-    left: 0
-    font-size: 1.6rem
-    font-weight: 666
-    padding: 1.2rem
-    padding-right: 1.25rem
-    border-bottom-left-radius: 10px
-    border-bottom-right-radius: 10px
-    background: green
-    shadow()
+    absolute(left: 0)
+    font-weight: 600
   .just-type-tool-bar
     flex: 1
-    line-height: size2
-    font-size: .8rem
+    line-height: 2
+    font-size: .9rem
     text-align: right
