@@ -17,7 +17,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
-    "@ppzp/stylus": "file:../stylus/ppzp-stylus-0.0.1.tgz",
+    "@ppzp/stylus": "file:../stylus/ppzp-stylus-0.0.2.tgz",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
@@ -29,8 +29,7 @@
     "webpack-dev-server": "^4.7.1"
   },
   "dependencies": {
-    "@ppzp/react": "file:../react/ppzp-react-0.0.1.tgz",
-    "@ppzp/style": "file:../style/ppzp-style-0.0.0.tgz",
+    "@ppzp/react": "file:../react/dist/ppzp-react-0.0.2.tgz",
     "@ppzp/utils": "0.0.1",
     "animate.css": "^4.1.1",
     "canvas-confetti": "^1.4.0",

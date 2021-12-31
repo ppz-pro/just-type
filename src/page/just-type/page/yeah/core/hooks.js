@@ -7,7 +7,7 @@ const onWrongType = audio(errorMP3)
 
 const onRightType = () => {}
 
-import diMP3 from './audio/di.mp3'
+import diMP3 from './audio/success.mp3'
 const onFinishOne = audio(diMP3)
 
 import applauseMP3 from './audio/applause.mp3'
