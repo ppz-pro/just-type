@@ -29,7 +29,7 @@
     "webpack-dev-server": "^4.7.1"
   },
   "dependencies": {
-    "@ppzp/react": "file:../react/dist/ppzp-react-0.0.2.tgz",
+    "@ppzp/react": "file:../react/dist/ppzp-react-0.0.1.tgz",
     "@ppzp/utils": "0.0.1",
     "animate.css": "^4.1.1",
     "canvas-confetti": "^1.4.0",

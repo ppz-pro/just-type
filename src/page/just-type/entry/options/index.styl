@@ -1,12 +1,20 @@
 @import '@ppzp/stylus'
 
 .jt-options
-  fixed(1rem, 1rem)
-  & > *
+  fixed(top: 1rem, right: 2rem, left: 2rem)
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  color: text(a: .5)
+  font-size: .8rem
+  & > div
+    display: flex
+    align-items: center
+  .right > *
+    margin-left: 1rem
     color: text(a: .5)
-    margin-right: 1rem
     &:hover
-      color: text(a: .8)
+      color: text(a: 1)
   a
     text-decoration: none
     &.iconfont
@@ -15,6 +23,6 @@
     border: none
     outline: none
     background: transparent
-    line-height: 1.5rem
-    height: 1.5rem
     padding: 0
+    cursor: pointer
+    font-size: .8rem
