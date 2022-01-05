@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom'
 import Options from './options'
 import Yeah from '../page/yeah'
+import './index.styl'
 
 export default function() {
   return <div>

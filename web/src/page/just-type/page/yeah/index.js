@@ -4,7 +4,7 @@ import './index.styl'
 
 export default function() {
   const list = ['I', 'have', 'a', 'dream']
-  return <div className = 'page-yeah'>
+  return <div className = 'page-yeah jt-no-scroll'>
     <div className = 'main'>
       <Core
         target = {list}
