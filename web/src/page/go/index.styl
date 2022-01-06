@@ -1,5 +1,25 @@
 @import '@ppzp/stylus'
 
+.yeah-lt
+  span
+    cursor: pointer
+    position: relative
+    font-family: 'iconfont' !important
+    &::before
+      position: absolute
+      top: 0
+      opacity: 0
+      transition: opacity .18s
+      color: text()
+    &:hover::before
+      opacity: 1
+  .source::before
+    right: 106%
+    content: '\e647'
+  .part::before
+    left: 106%
+    content: '\e647'
+
 .page-yeah
   flex-center()
   height: 100vh

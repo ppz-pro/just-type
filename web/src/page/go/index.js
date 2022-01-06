@@ -40,10 +40,12 @@ export default function({ setLT }) {
 
   useEffect(() => {
     if(list && part) {
+      const partSum = Math.ceil(list.length / sumPerPart)
       setLT(
-        <div>
-          <span>{source.title}</span>
-          <span>PART {part}</span>
+        <div className = 'yeah-lt'>
+          <span className = 'source'>{source.title}</span>
+          <i className = 'iconfont icon-arrow-right'></i>
+          <span className = 'part'>PART {part} of {partSum}</span>
         </div>
       )
       const typing = list.slice((part - 1) * sumPerPart, part * sumPerPart)
