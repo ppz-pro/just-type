@@ -27,7 +27,7 @@ module.exports = {
           }
         }
       }, {
-        test: /\.(mp3|png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(mp3|png|svg|jpg|jpeg|gif|jt)$/i,
         type: 'asset/resource'
       }
     ]

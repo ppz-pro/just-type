@@ -1,6 +1,6 @@
 import danger from '@ppzp/utils/danger'
 import confetti from 'canvas-confetti'
-import audio from '../../../../../common/audio'
+import audio from '../../../common/audio'
 
 import errorMP3 from './audio/error.mp3'
 const onWrongType = audio(errorMP3)

@@ -78,7 +78,7 @@ export default class extends Component {
 
   render() {
     const { letters, current, illegalClassName } = this.state
-    return <div className = {'core-one ' + illegalClassName}>
+    return <div className = {'core-one ' + (illegalClassName||'')}>
       <div>{ letters.map( (letter, index) =>
         <span
           key = {index}

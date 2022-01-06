@@ -1,3 +1,5 @@
+@import '@ppzp/stylus'
+
 html, body
   margin: 0
   padding: 0
@@ -6,3 +8,32 @@ body
   max-width: 86rem
   margin: 0 auto
   position: relative
+
+.jt-options
+  padding: 1rem 2rem
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  color: text(a: .5)
+  font-size: .8rem
+  & > div
+    display: flex
+    align-items: center
+  .right > *
+    margin-left: 1rem
+    color: text(a: .5)
+    &:hover
+      color: text(a: 1)
+  a
+    text-decoration: none
+    &.iconfont
+      font-size: 1.5rem
+  button
+    border: none
+    outline: none
+    background: transparent
+    padding: 0
+    cursor: pointer
+    font-size: .8rem
+.jt-no-scroll
+  height calc(100vh - 3.5rem) // 1rem * 2 + 1.5rem
