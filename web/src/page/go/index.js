@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import random from '@ppzp/utils/array/random'
+import { useBool } from '@ppzp/react'
 
 import Core from './core'
 import './index.styl'
 import cet4 from './word-lib/cet4.jt'
 import { useAppContext } from '../../entry/app'
+import SwitchPart from './switch-part'
 
 const sources = [
   {
@@ -26,6 +28,10 @@ export default function({ setLT }) {
   const [typing, setTyping] = useState()
   // 每部分的单词数
   const [sumPerPart, setSum] = useState(20)
+  const partSum = list && Math.ceil(list.length / sumPerPart)
+  // 显示选词库
+  // 显示选章节
+  const [showSwitchPart, showSP, hideSP] = useBool()
 
   // source 变时
   useEffect(async () => {
@@ -38,14 +44,14 @@ export default function({ setLT }) {
     setList(raw.split('\r\n')) // 设置 list，出发 [list] effect
   }, [source])
 
+  // 选、初始化 词库、章节
   useEffect(() => {
     if(list && part) {
-      const partSum = Math.ceil(list.length / sumPerPart)
       setLT(
         <div className = 'yeah-lt'>
           <span className = 'source'>{source.title}</span>
           <i className = 'iconfont icon-arrow-right'></i>
-          <span className = 'part'>PART {part} of {partSum}</span>
+          <span className = 'part' onClick = {showSP}>Part {part} of {partSum}</span>
         </div>
       )
       const typing = list.slice((part - 1) * sumPerPart, part * sumPerPart)
@@ -67,5 +73,11 @@ export default function({ setLT }) {
       />
       || '加载中'
     }</div>
+    <SwitchPart
+      show = {showSwitchPart} hide = {hideSP}
+      partSum = {partSum}
+      currentPart = {part}
+      setPart = {setPart}
+    />
   </div>
 }

@@ -1,4 +1,5 @@
 @import '@ppzp/stylus'
+@import '../../variables'
 
 .yeah-lt
   span
@@ -22,4 +23,50 @@
 
 .page-yeah
   flex-center()
-  height: 100vh
+.switch-part
+  .modal-content
+    background: n-text()
+    border-radius: 1rem
+    padding: 1rem
+    width: 4 * 8.8rem + 2
+    .item
+      text-align: center
+      line-height: 3rem
+      border-radius: 1.5rem
+      cursor: pointer
+      color: text(a: .8)
+      transition: all .3s
+      &:hover, &.selected
+        font-weight: bold
+        color: text()
+        transform: scale(1.1, 1.1)
+    .ranges
+      padding-bottom: .6rem
+      margin-bottom: .6rem
+      border-bottom: 1px solid text(a: .1)
+      display: flex
+      justify-content: center
+      align-items: center
+      .item
+        width: 8.8rem
+      i
+        cursor: pointer
+        font-size: 1.6rem
+        color: text(a: .3)
+        padding: .6rem
+        margin-left: 1rem
+        transition: all .3s
+        &:hover
+          transform: scale(1.1, 1.1)
+          color: text(a: .6)
+    .parts
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      .item
+        width: 6.8rem
+        font-size: .9rem
+        span
+          margin-left: .2em
+          font-size: 1.1rem
+          font-weight: bold
