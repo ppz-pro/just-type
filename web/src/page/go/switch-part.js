@@ -5,7 +5,7 @@ import times from '@ppzp/utils/times'
 export default
 function SwitchPart({
   show, hide,
-  currentPart, partSum, setPart
+  value, partSum, onChange
 }) {
   // 一页显示多少 item
   const pageSum = 20 // item1 ~ item20
@@ -75,7 +75,11 @@ function SwitchPart({
     <div className = 'parts'>{
       times(pageSum, index =>
         <div key = {index}
-          className = {`item ${currentPart == index + startIndex ? 'selected':''}`}
+          className = {`item ${value == index + startIndex ? 'selected':''}`}
+          onClick = {() => {
+            onChange(index + startIndex)
+            hide()
+          }}
         >
           Part {startIndex + index}
         </div>

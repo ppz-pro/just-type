@@ -76,8 +76,8 @@ export default function({ setLT }) {
     <SwitchPart
       show = {showSwitchPart} hide = {hideSP}
       partSum = {partSum}
-      currentPart = {part}
-      setPart = {setPart}
+      value = {part}
+      onChange = {setPart}
     />
   </div>
 }
